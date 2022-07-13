@@ -1,0 +1,12 @@
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\obj\Debug\DataAccses.csproj.AssemblyReference.cache
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\obj\Debug\DataAccses.csproj.CoreCompileInputs.cache
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\DataAccses.dll.config
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\DataAccses.dll
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\DataAccses.pdb
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\EntityFramework.dll
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\EntityFramework.xml
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\obj\Debug\DataAccses.csproj.CopyComplete
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\obj\Debug\DataAccses.dll
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BitirmeProjem\BilgeHotel\DataAccses\obj\Debug\DataAccses.pdb
