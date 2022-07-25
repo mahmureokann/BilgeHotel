@@ -20,6 +20,7 @@ namespace DataAccses.Entity
         //Bir müşterinin kaç rezervasyon bilgisi olur? Bir fazla olur
         public List<ReservationInfo> reservationInfos { get; set; }
 
+    
 
     }
 }

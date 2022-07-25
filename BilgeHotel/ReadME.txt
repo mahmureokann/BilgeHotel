@@ -34,6 +34,8 @@ BÝLGE HOTEL
 
 - Employee için Listeleme ekleme güncelleme ve silme iþlemleri yapýldý.
 
+- Vardiya için crud iþlemleri yapýldý.
+
 
 
 

@@ -357,6 +357,7 @@
             this.Controls.Add(this.CalisanBilgileri);
             this.Name = "EmployeeForm";
             this.Text = "EmployeeForm";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.CalisanBilgileri.ResumeLayout(false);
             this.CalisanBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

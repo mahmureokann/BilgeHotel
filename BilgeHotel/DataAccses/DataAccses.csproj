@@ -58,6 +58,7 @@
     <Compile Include="Entity\HolidayPackage.cs" />
     <Compile Include="Entity\ReservationInfo.cs" />
     <Compile Include="Entity\RoomType.cs" />
+    <Compile Include="Entity\Vardiya.cs" />
     <Compile Include="Enums\OdaDurumu.cs" />
     <Compile Include="Enums\Title.cs" />
     <Compile Include="Map\CustomerMap.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Map\ReservationMap.cs" />
     <Compile Include="Map\RoomTypeMap.cs" />
     <Compile Include="Map\TypeEntityTypeConfiguration.cs" />
+    <Compile Include="Map\VardiyaMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

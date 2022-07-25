@@ -34,6 +34,7 @@
             this.tatilPaketleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odaTipleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervasyonlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.çalışanVardiyalarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,10 +46,11 @@
             this.musteriMenuToolStripMenuItem,
             this.tatilPaketleriToolStripMenuItem,
             this.odaTipleriToolStripMenuItem,
-            this.rezervasyonlarToolStripMenuItem});
+            this.rezervasyonlarToolStripMenuItem,
+            this.çalışanVardiyalarıToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,6 +85,13 @@
             this.rezervasyonlarToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.rezervasyonlarToolStripMenuItem.Text = "Rezervasyonlar";
             // 
+            // çalışanVardiyalarıToolStripMenuItem
+            // 
+            this.çalışanVardiyalarıToolStripMenuItem.Name = "çalışanVardiyalarıToolStripMenuItem";
+            this.çalışanVardiyalarıToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.çalışanVardiyalarıToolStripMenuItem.Text = "Çalışan Vardiyaları";
+            this.çalışanVardiyalarıToolStripMenuItem.Click += new System.EventHandler(this.çalışanVardiyalarıToolStripMenuItem_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -108,5 +117,6 @@
         private System.Windows.Forms.ToolStripMenuItem tatilPaketleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem odaTipleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rezervasyonlarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem çalışanVardiyalarıToolStripMenuItem;
     }
 }

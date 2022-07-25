@@ -32,6 +32,7 @@ namespace DataAccses.Context
             modelBuilder.Configurations.Add(new RoomTypeMap());
             modelBuilder.Configurations.Add(new HolidayMap()); //class'taki constructor'in calismasi icin new yazarak instance aldik.
             modelBuilder.Configurations.Add(new ReservationMap());
+            modelBuilder.Configurations.Add(new VardiyaMap());
            
             
             

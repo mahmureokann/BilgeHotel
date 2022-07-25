@@ -207,6 +207,11 @@ namespace Employee_UI
             
             CalisanList();
         }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

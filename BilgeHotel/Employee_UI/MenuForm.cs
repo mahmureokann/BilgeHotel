@@ -55,6 +55,11 @@ namespace Employee_UI
         {
             childForm(new EmployeeForm());
         }
+
+        private void çalışanVardiyalarıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            childForm(new VardiyaForm());
+        }
     }
 }
 

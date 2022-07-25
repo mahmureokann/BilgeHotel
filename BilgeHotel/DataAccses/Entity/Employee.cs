@@ -25,7 +25,9 @@ namespace DataAccses.Entity
         //public int GunSayisi { get; set; } // ? Boş geçilip geçilemeyeceği ilie ilgili bir durum.
         public decimal Ucret { get; set; } //Yalnızca yöneticiler için
         public decimal SaatlikUcret { get; set; }
-        public decimal VardiyaSuresi { get; set; }
+
+        
+        public int VardiyaSuresi { get; set; }
         private decimal _maas { get; set; }
         public decimal Maas
         {
@@ -75,6 +77,13 @@ namespace DataAccses.Entity
 
             set { _maas = value; }
         }
+
+        //Bir çalışanın kaç vardiyası olur? Bir
+        public int? VardiyaId { get; set; }
+        public Vardiya Vardiya { get; set; }
+
+        
+
     }
 
 

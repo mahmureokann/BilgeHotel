@@ -123,6 +123,19 @@
             }
 
 
+            DateTime dtVardiya = new DateTime(2020, 06, 23);
+            DateTime dtVardiya2 = new DateTime(2020, 06, 24);
+            //Vardiya
+            List<Vardiya> vardiyas = new List<Vardiya>()
+             {
+                 new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
+                 new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
+                 new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
+                 
+             };
+
+            
+
 
 
         }
