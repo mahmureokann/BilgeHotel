@@ -36,6 +36,12 @@ BÝLGE HOTEL
 
 - Vardiya için crud iþlemleri yapýldý.
 
+- Müþteri bilgileri listelendi.
+
+- Rezervasyon bilgileri listelendi.(Gun sayýsý sorunlu!!)
+
+
+
 
 
 

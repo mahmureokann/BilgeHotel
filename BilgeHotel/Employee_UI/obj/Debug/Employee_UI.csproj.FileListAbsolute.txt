@@ -22,3 +22,5 @@ C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\
 C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.VardiyaForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.CustomerForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.RezervasyonForm.resources

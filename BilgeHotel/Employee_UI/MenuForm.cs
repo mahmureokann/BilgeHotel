@@ -60,6 +60,16 @@ namespace Employee_UI
         {
             childForm(new VardiyaForm());
         }
+
+        private void musteriMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            childForm(new CustomerForm());
+        }
+
+        private void rezervasyonlarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            childForm(new RezervasyonForm());
+        }
     }
 }
 

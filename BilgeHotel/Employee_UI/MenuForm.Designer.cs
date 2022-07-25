@@ -66,6 +66,7 @@
             this.musteriMenuToolStripMenuItem.Name = "musteriMenuToolStripMenuItem";
             this.musteriMenuToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.musteriMenuToolStripMenuItem.Text = "Musteri Menu";
+            this.musteriMenuToolStripMenuItem.Click += new System.EventHandler(this.musteriMenuToolStripMenuItem_Click);
             // 
             // tatilPaketleriToolStripMenuItem
             // 
@@ -84,6 +85,7 @@
             this.rezervasyonlarToolStripMenuItem.Name = "rezervasyonlarToolStripMenuItem";
             this.rezervasyonlarToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.rezervasyonlarToolStripMenuItem.Text = "Rezervasyonlar";
+            this.rezervasyonlarToolStripMenuItem.Click += new System.EventHandler(this.rezervasyonlarToolStripMenuItem_Click);
             // 
             // çalışanVardiyalarıToolStripMenuItem
             // 
