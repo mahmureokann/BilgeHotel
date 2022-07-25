@@ -8,7 +8,7 @@ namespace DataAccses.Enums
 {
     public enum Title
     {
-        
+        pozisyona_bakınız,
         resepsiyon_gorevlisi,
         temizlik_gorevlisi,
         ascı,

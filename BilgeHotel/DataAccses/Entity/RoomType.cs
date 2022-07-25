@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccses.Entity
 {
-    public class RoomType
+    public class RoomType:BaseEntity
     {
         public int RoomTypeId { get; set; }
 

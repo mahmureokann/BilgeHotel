@@ -8,21 +8,23 @@ using System.Threading.Tasks;
 
 namespace DataAccses.Entity
 {
-    public class Employee
+    public class Employee : BaseEntity
     {
         public int EmployeeId { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
-    
-        public Title Title { get; set; }
+
+        public Title Title { get; set; } //Enum Title listelemede kullanılacak
+       
+        public string Pozisyon { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        
-       
+
+
 
         //public int GunSayisi { get; set; } // ? Boş geçilip geçilemeyeceği ilie ilgili bir durum.
-        public decimal Ucret { get; set; }
-       public decimal SaatlikUcret { get; set; }
+        public decimal Ucret { get; set; } //Yalnızca yöneticiler için
+        public decimal SaatlikUcret { get; set; }
         public decimal VardiyaSuresi { get; set; }
         private decimal _maas { get; set; }
         public decimal Maas
@@ -54,7 +56,7 @@ namespace DataAccses.Entity
                     case Title.Yonetici: //
                         _maas = Ucret;
                         break;
-                    
+
                     case Title.resepsiyon_sefi: //
                         _maas = Ucret;
                         break;
@@ -63,7 +65,7 @@ namespace DataAccses.Entity
                         break;
                     default:
                         break;
-                   
+
                 }
                 return _maas;
 
@@ -79,5 +81,5 @@ namespace DataAccses.Entity
 
 
 
-    
+
 }

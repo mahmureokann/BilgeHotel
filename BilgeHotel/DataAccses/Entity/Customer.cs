@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccses.Entity
 {
-    public class Customer
+    public class Customer:BaseEntity
     {
         public int CustomerId { get; set; }
         public string Tckn { get; set; }

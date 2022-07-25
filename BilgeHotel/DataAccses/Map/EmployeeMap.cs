@@ -17,6 +17,7 @@ namespace DataAccses.Map
             Property(x => x.Firstname).HasMaxLength(50).IsRequired();
             Property(x => x.Lastname).HasMaxLength(50).IsRequired();
             //Property(x => x.Title).IsRequired();
+            Property(x => x.Pozisyon).HasMaxLength(50).IsRequired();
             Property(x => x.Email).HasMaxLength(50).IsRequired();
             Property(x => x.Password).IsRequired().HasMaxLength(20);
             Property(x => x.VardiyaSuresi).IsOptional();

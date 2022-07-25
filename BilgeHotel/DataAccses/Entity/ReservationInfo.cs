@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccses.Entity
 {
-    public class ReservationInfo
+    public class ReservationInfo:BaseEntity
     {
 
         public int ReservationInfoId { get; set; }
@@ -15,9 +15,38 @@ namespace DataAccses.Entity
 
         public DateTime RezBitis { get; set; }
 
-        public int GunSayisi { get; set; }
+        private int _gunSayisi;
+        public int GunSayisi
+        {
+            get
+            {
+                _gunSayisi = RezBitis.Day - RezBaslangic.Day;
+                return _gunSayisi;
+            }
 
-        public DateTime RezervasyonTarihi { get; set; } //rezervasyonun olusturuldugu gün olan tarih
+
+            set
+            {
+                _gunSayisi = value;
+            } 
+        
+        }
+        private DateTime _rezTarihi;
+        public DateTime RezervasyonTarihi
+        {
+            get
+            {
+                _rezTarihi = DateTime.Now;
+                return _rezTarihi;
+
+            }
+
+            set
+            {
+
+                 _rezTarihi = value;
+            }
+        }//rezervasyonun olusturuldugu gün olan tarih
 
         
        

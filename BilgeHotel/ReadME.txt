@@ -6,6 +6,8 @@ BÝLGE HOTEL
 
 - Entity klasörü açýldý ve entityler eklendi ve iliþkilendirmeler yapýldý.
 
+-Entity klasorüne BaseEntity classý açýldý.Tüm entityler, BaseEntityden miras alýyorlar.Bunun sebebi ise BLL'de Crud iþlemlerini yapabilmek.
+
 - Enum klasoru açýldý. Title enumý açýldý.7 resepsiyon görevlisi, 11 temizlik görevlisi, 11 aþçý, 13 garson,1 elektrikçi, 1 bilgi iþlem sorumlusu, Yönetici(insan kaynaklarý),Satýþ departmaný yöneticisi,resepsiyon þefi, IT sorumlusu
 
 - Enum klasoru içerisine Oda Türü için enum açýldý.
@@ -19,6 +21,18 @@ BÝLGE HOTEL
 -> ClassLibrary BLL açýldý.
 
 - DataAcsess katmanýndan referans verildi ve EntityFramework indirildi.
+
+- BLL katmaný içerisine Repository adýnda bir klasör açýldý. Ýçerisine BaseRepository classý ve IRepository adlý bir interface açýldý.
+
+- BaseRepository içerisinde tüm classlar için ortak olan crud iþlemleri var.Farklýlýk gösteren methodlar için ise Service adlý bir class içerisinde olacak.Bu yüzden BLL katmaný Concrete adýnda bir klasor açtým.
+
+-> Çalýþanlarýn görebileceði WFA projesi açýldý.
+
+- ChildForm eklendi
+
+- Çalýþanlar listelemek, eklemek, çýkarmak ve güncellemek için design iþlemi yapýldý.
+
+- Employee için Listeleme ekleme güncelleme ve silme iþlemleri yapýldý.
 
 
 
