@@ -31,13 +31,12 @@ namespace Employee_UI
                 lvi.Text = reservation.ReservationInfoId.ToString();
                 lvi.SubItems.Add(reservation.RezBaslangic.ToString());
                 lvi.SubItems.Add(reservation.RezBitis.ToString());
-                //Gun sayısı
-                lvi.SubItems.Add(reservation.GunSayisi.ToString());
                 lvi.SubItems.Add(reservation.RezervasyonTarihi.ToString());
                 lvi.SubItems.Add(reservation.CustomerId.ToString());
-                lvi.SubItems.Add(reservation.ToplamFiyat.ToString()); //Toplam Fiyat değiştirilmiyor çünkü çalışanlar müşterilerin ne kadar ödedikleri hakkında bir işlem yapamıyorlar.
                 lvi.SubItems.Add(reservation.HolidayPackageId.ToString());
                 lvi.SubItems.Add(reservation.RoomTypeId.ToString());
+                lvi.SubItems.Add(reservation.ToplamFiyat.ToString());
+                lvi.SubItems.Add(reservation.GunSayisi.ToString());
 
 
                 listView1.Items.Add(lvi);

@@ -37,6 +37,8 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,9 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader9,
+            this.columnHeader4,
+            this.columnHeader7});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -106,6 +110,16 @@
             this.columnHeader9.Text = "Oda Tipi ID";
             this.columnHeader9.Width = 120;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Toplam Fiyat";
+            this.columnHeader4.Width = 128;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Gün Sayısı";
+            this.columnHeader7.Width = 114;
+            // 
             // RezervasyonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -131,5 +145,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

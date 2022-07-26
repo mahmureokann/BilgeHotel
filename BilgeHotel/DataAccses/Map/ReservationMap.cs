@@ -17,9 +17,9 @@ namespace DataAccses.Map
             Property(x => x.RezBaslangic).IsRequired();
             Property(x => x.RezBitis).IsRequired();
             Property(x => x.GunSayisi).IsOptional();
-            Property(x => x.ToplamFiyat).IsOptional();
+            Property(x => x.ToplamFiyat).IsRequired();
 
-        
+
 
 
         }
