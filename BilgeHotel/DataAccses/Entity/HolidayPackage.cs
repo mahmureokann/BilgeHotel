@@ -9,6 +9,7 @@ namespace DataAccses.Entity
     public class HolidayPackage:BaseEntity
     {
         public int HolidayPackageId { get; set; }
+        public string PaketAdi { get; set; }
         //public int RoomTypeId { get; set; }
         public decimal Fiyat { get; set; }
 

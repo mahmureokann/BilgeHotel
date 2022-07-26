@@ -70,6 +70,16 @@ namespace Employee_UI
         {
             childForm(new RezervasyonForm());
         }
+
+        private void odaTipleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            childForm(new OdaTipiForm());
+        }
+
+        private void tatilPaketleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            childForm(new TatilPaketForm());
+        }
     }
 }
 

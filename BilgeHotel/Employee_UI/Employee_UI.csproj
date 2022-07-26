@@ -74,6 +74,12 @@
     <Compile Include="MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OdaTipiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdaTipiForm.Designer.cs">
+      <DependentUpon>OdaTipiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RezervasyonForm.cs">
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="RezervasyonForm.Designer.cs">
       <DependentUpon>RezervasyonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TatilPaketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TatilPaketForm.Designer.cs">
+      <DependentUpon>TatilPaketForm.cs</DependentUpon>
     </Compile>
     <Compile Include="VardiyaForm.cs">
       <SubType>Form</SubType>
@@ -97,6 +109,9 @@
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OdaTipiForm.resx">
+      <DependentUpon>OdaTipiForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="RezervasyonForm.resx">
       <DependentUpon>RezervasyonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TatilPaketForm.resx">
+      <DependentUpon>TatilPaketForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VardiyaForm.resx">
       <DependentUpon>VardiyaForm.cs</DependentUpon>

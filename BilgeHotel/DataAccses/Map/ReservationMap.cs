@@ -16,6 +16,9 @@ namespace DataAccses.Map
             Property(x => x.RezervasyonTarihi).IsRequired();
             Property(x => x.RezBaslangic).IsRequired();
             Property(x => x.RezBitis).IsRequired();
+            Property(x => x.GunSayisi).IsOptional();
+            Property(x => x.ToplamFiyat).IsOptional();
+
         
 
 

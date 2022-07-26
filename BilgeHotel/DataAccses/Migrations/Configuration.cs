@@ -8,7 +8,7 @@
     using System.Data.Entity.Validation;
     using System.Linq;
     using System.Text;
-    
+
 
     internal sealed class Configuration : DbMigrationsConfiguration<DataAccses.Context.ProjectContext>
     {
@@ -67,10 +67,10 @@
             //Oda Tipleri
             List<RoomType> roomTypes = new List<RoomType>()
              {
-                 new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Üç kişilik",Fiyat=5000},
-                 new RoomType { OdaTipi="Her şey dahil", OdaTuru="Dört kişilik",Fiyat=15000 },
-                 new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Tek kişilik",Fiyat=2000 },
-                 new RoomType { OdaTipi="Her şey dahil", OdaTuru="Kral dairesi",Fiyat=20000 },
+                 new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Üç kişilik", OdaDurumu=DataAccses.Enums.OdaDurumu.Aktif,Fiyat=5000},
+                 new RoomType { OdaTipi="Her şey dahil", OdaTuru="Dört kişilik",OdaDurumu=DataAccses.Enums.OdaDurumu.Tadilat,Fiyat=15000 },
+                 new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Tek kişilik",OdaDurumu=DataAccses.Enums.OdaDurumu.Temizlik,Fiyat=2000 },
+                 new RoomType { OdaTipi="Her şey dahil", OdaTuru="Kral dairesi",OdaDurumu=DataAccses.Enums.OdaDurumu.Aktif,Fiyat=20000 },
              };
 
             if (!context.RoomTypes.Any())//herhangi bir oda tipi yoksa
@@ -85,10 +85,10 @@
             //HolidayPackage
             List<HolidayPackage> holidayPackages = new List<HolidayPackage>()
              {
-                 new HolidayPackage { HolidayPackageId=1 , Fiyat=1500 },
-                 new HolidayPackage {HolidayPackageId =2,Fiyat=8000 },
-                 new HolidayPackage {HolidayPackageId=3 ,Fiyat=11000 },
-                 new HolidayPackage { HolidayPackageId=4, Fiyat=7000 },
+                 new HolidayPackage { HolidayPackageId=1,PaketAdi="Standart Paket" , Fiyat=1500 },
+                 new HolidayPackage {HolidayPackageId =2,PaketAdi="Ultra Paket",Fiyat=8000 },
+                 new HolidayPackage {HolidayPackageId=3 ,PaketAdi="Kampanyalı Paket",Fiyat=11000 },
+
              };
 
             if (!context.HolidayPackages.Any())//herhangi bir tatil paketi yoksa
@@ -100,17 +100,21 @@
                 }
             }
 
-            
+
             //Rezervasyon
 
-            DateTime dt1 = new DateTime(2020,06,14);
-            DateTime dt2 = new DateTime(2020,06,21);
+            DateTime dt1 = new DateTime(2020, 06, 14);
+            DateTime dt2 = new DateTime(2020, 06, 21);
+
+
 
             List<ReservationInfo> reservationInfos = new List<ReservationInfo>()
             {
-                new ReservationInfo{RezBaslangic=dt1,RezBitis=dt2,HolidayPackageId=1,CustomerId=1,RoomTypeId=1},
-                new ReservationInfo{RezBaslangic=dt1,RezBitis=dt2,RezervasyonTarihi=DateTime.Now,HolidayPackageId=2,CustomerId=2,RoomTypeId=2}
-               
+
+
+                new ReservationInfo{RezBaslangic=dt1,RezBitis=dt2,HolidayPackageId=1,CustomerId=1,RoomTypeId=1,ToplamFiyat=45500,GunSayisi=7},
+                new ReservationInfo{RezBaslangic=dt1,RezBitis=dt2,RezervasyonTarihi=DateTime.Now,HolidayPackageId=2,CustomerId=2,RoomTypeId=2,ToplamFiyat=161000,GunSayisi=7}
+
             };
 
             if (!context.ReservationInfos.Any())
@@ -131,10 +135,10 @@
                  new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
                  new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
                  new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
-                 
+
              };
 
-            
+
 
 
 

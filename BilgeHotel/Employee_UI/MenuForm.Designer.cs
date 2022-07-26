@@ -73,12 +73,14 @@
             this.tatilPaketleriToolStripMenuItem.Name = "tatilPaketleriToolStripMenuItem";
             this.tatilPaketleriToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.tatilPaketleriToolStripMenuItem.Text = "Tatil Paketleri";
+            this.tatilPaketleriToolStripMenuItem.Click += new System.EventHandler(this.tatilPaketleriToolStripMenuItem_Click);
             // 
             // odaTipleriToolStripMenuItem
             // 
             this.odaTipleriToolStripMenuItem.Name = "odaTipleriToolStripMenuItem";
             this.odaTipleriToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
             this.odaTipleriToolStripMenuItem.Text = "Oda Tipleri";
+            this.odaTipleriToolStripMenuItem.Click += new System.EventHandler(this.odaTipleriToolStripMenuItem_Click);
             // 
             // rezervasyonlarToolStripMenuItem
             // 

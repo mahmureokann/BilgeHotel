@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccses.Enums
 {
-    internal enum OdaDurumu
+    public enum OdaDurumu
     {
         Aktif,
         Pasif,

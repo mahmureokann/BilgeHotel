@@ -15,6 +15,7 @@ namespace DataAccses.Map
             Property(x => x.HolidayPackageId).IsRequired();
             //Property(x => x.RoomTypeId).IsRequired();
             Property(x => x.Fiyat).IsRequired();
+            Property(x => x.PaketAdi).IsRequired();
             
 
 

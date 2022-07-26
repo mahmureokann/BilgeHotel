@@ -38,7 +38,11 @@ BÝLGE HOTEL
 
 - Müþteri bilgileri listelendi.
 
-- Rezervasyon bilgileri listelendi.(Gun sayýsý sorunlu!!)
+- Oda Tipi için crud iþlemleri yapýldý.
+
+- Tatil paketleri için Crud iþlemleri yapýldý.
+
+- Rezervasyon bilgileri listelenemedi.(Gun sayýsý sorunlu!!)
 
 
 

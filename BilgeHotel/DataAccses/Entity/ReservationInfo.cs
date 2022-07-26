@@ -15,8 +15,8 @@ namespace DataAccses.Entity
 
         public DateTime RezBitis { get; set; }
 
-        private int _gunSayisi;
-        public int GunSayisi
+        private int? _gunSayisi;
+        public int? GunSayisi
         {
             get
             {
@@ -54,9 +54,9 @@ namespace DataAccses.Entity
 
         public int CustomerId { get; set; }
 
-        private decimal _toplamFiyat;
+        private decimal? _toplamFiyat;
 
-        public decimal ToplamFiyat //OOP prensiplerinden Encapsulation kullanıldı. Sebebi ise toplam fiyatı getirmek
+        public decimal? ToplamFiyat //OOP prensiplerinden Encapsulation kullanıldı. Sebebi ise toplam fiyatı getirmek
         {
             get
             {
