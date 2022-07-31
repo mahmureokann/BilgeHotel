@@ -26,3 +26,11 @@ C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\
 C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.RezervasyonForm.resources
 C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.OdaTipiForm.resources
 C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.TatilPaketForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.LoginForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.CalisanForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.CalisanMenuForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.MusteriForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.TatilPaketiCalisanForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.OdaCalisanForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.RezervasyonCalisanForm.resources
+C:\Users\CASPER\OneDrive - medipol.edu.tr\Masaüstü\BilgeHotel Bitirme Projesi\BilgeHotel\Employee_UI\obj\Debug\Employee_UI.VardiyaCalisanForm.resources

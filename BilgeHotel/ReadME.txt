@@ -42,7 +42,11 @@ BÝLGE HOTEL
 
 - Tatil paketleri için Crud iþlemleri yapýldý.
 
-- Rezervasyon bilgileri listelenemedi.(Gun sayýsý sorunlu!!)
+- Rezervasyon bilgileri listelendi.
+
+- Login iþlemi için form tasarýmý oluþturuldu.Calisanlarýn ve yöneticilerin girdikleri form olarak ikiye ayrýldý.Bir sürü form var ama olsun :))) Calisanlar = CalisanMenuForm , Yonetici = MenuForm
+
+- Login iþlemi için Calisan isen kullanýcý ad= calisan , þifre = 123 // Yönetici isen kullanýcý ad= yonetici , þifre = 123
 
 
 

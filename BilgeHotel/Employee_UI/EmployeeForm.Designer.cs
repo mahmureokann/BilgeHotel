@@ -62,12 +62,16 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Pozisyon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtKullaniciAd = new System.Windows.Forms.TextBox();
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CalisanBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // CalisanBilgileri
             // 
+            this.CalisanBilgileri.Controls.Add(this.txtKullaniciAd);
             this.CalisanBilgileri.Controls.Add(this.numericUpDown1);
             this.CalisanBilgileri.Controls.Add(this.label3);
             this.CalisanBilgileri.Controls.Add(this.btnGuncelle);
@@ -84,6 +88,7 @@
             this.CalisanBilgileri.Controls.Add(this.txtSoyad);
             this.CalisanBilgileri.Controls.Add(this.label2);
             this.CalisanBilgileri.Controls.Add(this.lblİsim);
+            this.CalisanBilgileri.Controls.Add(this.label4);
             this.CalisanBilgileri.Controls.Add(this.label1);
             this.CalisanBilgileri.Controls.Add(this.lblTitle);
             this.CalisanBilgileri.Controls.Add(this.lblMaas);
@@ -93,7 +98,7 @@
             this.CalisanBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CalisanBilgileri.Location = new System.Drawing.Point(12, 12);
             this.CalisanBilgileri.Name = "CalisanBilgileri";
-            this.CalisanBilgileri.Size = new System.Drawing.Size(413, 473);
+            this.CalisanBilgileri.Size = new System.Drawing.Size(413, 531);
             this.CalisanBilgileri.TabIndex = 0;
             this.CalisanBilgileri.TabStop = false;
             this.CalisanBilgileri.Text = "CalisanBilgileri";
@@ -116,7 +121,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(200, 410);
+            this.btnGuncelle.Location = new System.Drawing.Point(202, 450);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(110, 31);
             this.btnGuncelle.TabIndex = 2;
@@ -126,7 +131,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(316, 410);
+            this.btnSil.Location = new System.Drawing.Point(318, 450);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(91, 31);
             this.btnSil.TabIndex = 2;
@@ -136,7 +141,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(103, 410);
+            this.btnEkle.Location = new System.Drawing.Point(105, 450);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(91, 31);
             this.btnEkle.TabIndex = 2;
@@ -146,7 +151,7 @@
             // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(6, 410);
+            this.btnListele.Location = new System.Drawing.Point(8, 450);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(91, 31);
             this.btnListele.TabIndex = 2;
@@ -156,7 +161,7 @@
             // 
             // txtVardiya
             // 
-            this.txtVardiya.Location = new System.Drawing.Point(158, 339);
+            this.txtVardiya.Location = new System.Drawing.Point(158, 344);
             this.txtVardiya.Name = "txtVardiya";
             this.txtVardiya.Size = new System.Drawing.Size(206, 30);
             this.txtVardiya.TabIndex = 1;
@@ -232,7 +237,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 336);
+            this.label1.Location = new System.Drawing.Point(-5, 344);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 25);
             this.label1.TabIndex = 0;
@@ -295,12 +300,13 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
-            this.Pozisyon});
+            this.Pozisyon,
+            this.columnHeader10});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(431, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(847, 482);
+            this.listView1.Size = new System.Drawing.Size(996, 531);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -348,11 +354,32 @@
             // 
             this.Pozisyon.Text = "Pozisyon";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(-5, 390);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Kullanıcı Adı:";
+            // 
+            // txtKullaniciAd
+            // 
+            this.txtKullaniciAd.Location = new System.Drawing.Point(158, 385);
+            this.txtKullaniciAd.Name = "txtKullaniciAd";
+            this.txtKullaniciAd.Size = new System.Drawing.Size(206, 30);
+            this.txtKullaniciAd.TabIndex = 5;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Kullanıcı Adı";
+            this.columnHeader10.Width = 115;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 497);
+            this.ClientSize = new System.Drawing.Size(1432, 593);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.CalisanBilgileri);
             this.Name = "EmployeeForm";
@@ -401,5 +428,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox txtPoz;
         private System.Windows.Forms.ColumnHeader Pozisyon;
+        private System.Windows.Forms.TextBox txtKullaniciAd;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }

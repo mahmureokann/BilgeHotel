@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbOdaTuru = new System.Windows.Forms.ComboBox();
+            this.cmbOdaTipi = new System.Windows.Forms.ComboBox();
+            this.cmbDurum = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -36,6 +40,7 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -43,12 +48,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbDurum = new System.Windows.Forms.ComboBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmbOdaTipi = new System.Windows.Forms.ComboBox();
-            this.cmbOdaTuru = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,40 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Oda Bilgileri";
+            // 
+            // cmbOdaTuru
+            // 
+            this.cmbOdaTuru.FormattingEnabled = true;
+            this.cmbOdaTuru.Location = new System.Drawing.Point(162, 149);
+            this.cmbOdaTuru.Name = "cmbOdaTuru";
+            this.cmbOdaTuru.Size = new System.Drawing.Size(182, 33);
+            this.cmbOdaTuru.TabIndex = 5;
+            this.cmbOdaTuru.SelectedIndexChanged += new System.EventHandler(this.cmbOdaTuru_SelectedIndexChanged);
+            // 
+            // cmbOdaTipi
+            // 
+            this.cmbOdaTipi.FormattingEnabled = true;
+            this.cmbOdaTipi.Location = new System.Drawing.Point(162, 107);
+            this.cmbOdaTipi.Name = "cmbOdaTipi";
+            this.cmbOdaTipi.Size = new System.Drawing.Size(182, 33);
+            this.cmbOdaTipi.TabIndex = 5;
+            // 
+            // cmbDurum
+            // 
+            this.cmbDurum.FormattingEnabled = true;
+            this.cmbDurum.Location = new System.Drawing.Point(162, 191);
+            this.cmbDurum.Name = "cmbDurum";
+            this.cmbDurum.Size = new System.Drawing.Size(182, 33);
+            this.cmbDurum.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Oda Turu:";
             // 
             // btnSil
             // 
@@ -139,6 +173,15 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Fiyat:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Oda Durumu:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -194,52 +237,10 @@
             this.columnHeader4.Text = "Oda Durumu";
             this.columnHeader4.Width = 144;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 191);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Oda Durumu:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Oda Turu:";
-            // 
-            // cmbDurum
-            // 
-            this.cmbDurum.FormattingEnabled = true;
-            this.cmbDurum.Location = new System.Drawing.Point(162, 191);
-            this.cmbDurum.Name = "cmbDurum";
-            this.cmbDurum.Size = new System.Drawing.Size(182, 33);
-            this.cmbDurum.TabIndex = 5;
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Fiyat";
             this.columnHeader1.Width = 117;
-            // 
-            // cmbOdaTipi
-            // 
-            this.cmbOdaTipi.FormattingEnabled = true;
-            this.cmbOdaTipi.Location = new System.Drawing.Point(162, 107);
-            this.cmbOdaTipi.Name = "cmbOdaTipi";
-            this.cmbOdaTipi.Size = new System.Drawing.Size(182, 33);
-            this.cmbOdaTipi.TabIndex = 5;
-            // 
-            // cmbOdaTuru
-            // 
-            this.cmbOdaTuru.FormattingEnabled = true;
-            this.cmbOdaTuru.Location = new System.Drawing.Point(162, 149);
-            this.cmbOdaTuru.Name = "cmbOdaTuru";
-            this.cmbOdaTuru.Size = new System.Drawing.Size(182, 33);
-            this.cmbOdaTuru.TabIndex = 5;
             // 
             // OdaTipiForm
             // 

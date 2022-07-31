@@ -187,5 +187,10 @@ namespace Employee_UI
             OdaList();
 
         }
+
+        private void cmbOdaTuru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,8 +18,10 @@ namespace DataAccses.Entity
        
         public string Pozisyon { get; set; }
         public string Email { get; set; }
+        public string KullaniciAdi { get; set; }
         public string Password { get; set; }
 
+        
 
 
         //public int GunSayisi { get; set; } // ? Boş geçilip geçilemeyeceği ilie ilgili bir durum.

@@ -45,6 +45,7 @@ namespace Employee_UI
                 lvi.SubItems.Add(employee.SaatlikUcret.ToString());
                 lvi.SubItems.Add(employee.VardiyaSuresi.ToString());
                 lvi.SubItems.Add(employee.Pozisyon.ToString());
+                lvi.SubItems.Add(employee.KullaniciAdi.ToString());
 
                 listView1.Items.Add(lvi);
 
@@ -112,6 +113,10 @@ namespace Employee_UI
                 employee.VardiyaSuresi = Convert.ToInt32(txtVardiya.Text);
 
 
+            }
+            if (txtKullaniciAd.Text=="calisan"||txtKullaniciAd.Text=="yonetici")
+            {
+                employee.KullaniciAdi = txtKullaniciAd.Text;
             }
             else
             {

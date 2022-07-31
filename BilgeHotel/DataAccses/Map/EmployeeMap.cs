@@ -21,6 +21,7 @@ namespace DataAccses.Map
             Property(x => x.Email).HasMaxLength(50).IsRequired();
             Property(x => x.Password).IsRequired().HasMaxLength(20);
             Property(x => x.VardiyaSuresi).IsOptional();
+            Property(x => x.KullaniciAdi).IsRequired();
 
 
             Property(x => x.Ucret).IsOptional();

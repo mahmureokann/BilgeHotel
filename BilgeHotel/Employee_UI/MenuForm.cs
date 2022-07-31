@@ -80,6 +80,11 @@ namespace Employee_UI
         {
             childForm(new TatilPaketForm());
         }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
