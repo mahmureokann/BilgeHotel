@@ -14,6 +14,7 @@ namespace DataAccses.Entity
         public string OdaTipi { get; set; }
         public string OdaTuru { get; set; }
         public decimal Fiyat { get; set; }
+        public int? OdaSayisi { get; set; }
 
         public OdaDurumu OdaDurumu { get; set; }
 

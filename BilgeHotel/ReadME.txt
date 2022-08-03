@@ -48,6 +48,16 @@ BÝLGE HOTEL
 
 - Login iþlemi için Calisan isen kullanýcý ad= calisan , þifre = 123 // Yönetici isen kullanýcý ad= yonetici , þifre = 123
 
+-> ASP.net framework MVC seçilerek, MVC projesi oluþturuldu.Tüm projelerden referans verildi.Entity framework kurulumu yapýldý.
+
+- Models klasörü içerisinde AppUserVM classý açýldý ve email , þifre uyarýlarý gerçekleþtirildi.
+
+- WEbUI projesi icerisine bootstrap ve jquery yuklemesi yapildi.
+
+- Models klasörü içerisine AppUserVM Cart ve CartVM classlarý açýldý. Müþterilerin login iþlemini gerçekleþtirebilmesi için AppUserVM içerisine mail ve þifre iþlemleri için bilgiler yazýldý. CartItemVM classý içerisine toplam fiyat iþlemi gerçekleþtirildi. Carta rezervasyon bilgileri eklenirken kullanýlasý için Cart classý oluþturuldu.
+
+- HomeController içerisinde müþteri giriþi için Cart,Register, Login Controllerlarý oluþturuldu.
+
 
 
 
