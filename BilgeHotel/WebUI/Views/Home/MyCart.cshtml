@@ -5,35 +5,34 @@
 
 
 
-    //Cart sessionCart = Session["scart"] as Cart; //Unboxing
-    //decimal? totalPrice = 0;
+    CartVM sessionCart = Session["scart"] as CartVM; //Unboxing
+    decimal? totalPrice = 0;
 
 
 }
 
 <div class="row">
     <div class="col-md-9">
-        <table class="table table-responsive" style="background-color:white">
+        <table class="table table-responsive">
             <thead>
                 <tr>
-                    <th>Görsel</th>
-                    <th>Film Adı</th>
-                    <th>Bilet Adeti</th>
-                    <th>Fiyat</th>
-                    <th>Ara Toplam</th>
+                    <th>Tatil Paketi</th>
+                    <th>Oda Tipi</th>
+                    <th>Rezervasyon Giriş Tarihi</th>
+                    <th>Rezervasyon Çıkış Tarihi</th>
+                    <th>Toplam Fiyat</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in sessionCart.myCart)
                 {
-                    totalPrice += item.SubTotal;
+                    totalPrice += item.ToplamFiyat;
                     <tr>
-
-                        <td><img /></td>
-                        <td>@item.MovieName</td>
-                        <td>@item.Quantity</td>
-                        <td>@item.Price</td>
-                        <td>@item.SubTotal</td>
+                        <td>@item.TatilPaketi</td>
+                        <td>@item.OdaTuru</td>
+                        <td>@item.TatilBaslangic</td>
+                        <td>@item.TatilBitis</td>
+                        <td>@item.ToplamFiyat</td>
                     </tr>
                 }
             </tbody>
@@ -42,7 +41,6 @@
     <div class="col-md-3">
         <div class="card">
             <div class="card-header">
-                <h5>Siparis Ozeti</h5>
             </div>
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -51,12 +49,12 @@
                     <h5> @totalPrice TL</h5>
                 </div>
                 <div class="col-md-12 mt-5">
-                    @Html.ActionLink("Alisverisi Tamamla", "CompleteCart", "Home", null, new { @class = "btn btn-outline-dark" })
+                    @Html.ActionLink("Rezervasyonu Tamamla", "CompleteCart", "Home", null, new { @class = "btn btn-primary" })
                     @Html.ActionLink("Devam Et", "Index", "Home", null, new { @class = "btn" })
-                    @*text, action, controller, routeValue, htmlAttribute*@
                 </div>
             </div>
         </div>
     </div>
 </div>
+<br />
 

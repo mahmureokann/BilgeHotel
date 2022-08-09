@@ -11,8 +11,31 @@
             <div class="card shadow-lg border-0 rounded-lg mt-5">
                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Kayıt Ol</h3></div>
                 <div class="card-body">
-                    <form method="post">
-                       
+                    <form method="post">3
+                        <div>
+                            <label>İsim:</label>
+                            @Html.ValidationMessageFor(x => x.Firstname)
+                            <br />
+                            @Html.TextBoxFor(x => x.Firstname, new { @class = "form-control" })
+                        </div>
+                        <div>
+                            <label>Soyad:</label>
+                            @Html.ValidationMessageFor(x => x.Lastname)
+                            <br />
+                            @Html.TextBoxFor(x => x.Lastname, new { @class = "form-control" })
+                        </div>
+                        <div>
+                            <label>Tckn:</label>
+                            @Html.ValidationMessageFor(x => x.Tckn)
+                            <br />
+                            @Html.TextBoxFor(x => x.Tckn, new { @class = "form-control" })
+                        </div>
+                        <div>
+                            <label>Telefon numarası:</label>
+                            @Html.ValidationMessageFor(x => x.Tel)
+                            <br />
+                            @Html.TextBoxFor(x => x.Tel, new { @class = "form-control" })
+                        </div>
                         <div>
                             <label>Email:</label>
                             @Html.ValidationMessageFor(x => x.Email)

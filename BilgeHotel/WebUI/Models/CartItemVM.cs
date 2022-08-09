@@ -17,6 +17,7 @@ namespace WebUI.Models
         public string RoomType { get; set; }
         public decimal? RoomTypePrice { get; set; }
         public string HolidayPackage { get; set; }
+        public int HolidayPackageId { get; set; }
         public decimal? HolidayPackagePrice { get; set; }
         public int? OdaSayisi { get; set; }
         

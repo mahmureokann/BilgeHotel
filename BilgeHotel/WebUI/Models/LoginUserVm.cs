@@ -8,6 +8,9 @@ namespace WebUI.Models
 {
     public class LoginUserVm
     {
+       
+
+
         [Required(ErrorMessage = "Email giriniz!")]
         public string Email { get; set; }
 

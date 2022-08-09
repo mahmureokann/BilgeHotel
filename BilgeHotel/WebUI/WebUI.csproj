@@ -132,8 +132,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AppUserVM.cs" />
-    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartItemVM.cs" />
+    <Compile Include="Models\CartVM.cs" />
     <Compile Include="Models\LoginUserVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,6 +213,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\MyCart.cshtml" />
+    <Content Include="Views\Home\CompleteCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

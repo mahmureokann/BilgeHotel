@@ -48,14 +48,21 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                CustomerService customerService = new CustomerService();
+                
                 Customer customer = new Customer();
 
                 customer.Email = appUserVM.Email;
                 customer.Password = appUserVM.Password;
-                //var result = cs.Create(customer);
+                customer.Firstname = appUserVM.Firstname;
+                customer.Lastname = appUserVM.Lastname;
+                customer.PhoneNumber = appUserVM.Tel;
                 
-                var result = customerService.Create(customer);
+                customer.Tckn = appUserVM.Tckn;
+                
+
+                var result = cs.Create(customer);
+
+                
 
                 TempData["info"] = result;
 
@@ -77,15 +84,15 @@ namespace WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(AppUserVM appUser)
+        public ActionResult Login(LoginUserVm loginUserVm)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    if (db.Customers.Any(x => x.Email == appUser.Email && x.Password == appUser.Password))
+                    if (db.Customers.Any(x => x.Email == loginUserVm.Email && x.Password == loginUserVm.Password))
                     {
-                        Customer user = db.Customers.Where(x => x.Email == appUser.Email && x.Password == appUser.Password).FirstOrDefault();
+                        Customer user = db.Customers.Where(x => x.Email == loginUserVm.Email && x.Password == loginUserVm.Password).FirstOrDefault();
 
                         Session["scart"] = user;
                         return RedirectToAction("MyCart");
@@ -93,7 +100,7 @@ namespace WebUI.Controllers
                     else
                     {
                         TempData["error"] = "E-mail veya şifre hatalı!";
-                        return View(appUser);
+                        return View(loginUserVm);
                     }
                 }
                 catch (Exception)
@@ -103,7 +110,7 @@ namespace WebUI.Controllers
             }
             else
             {
-                return View(appUser);
+                return View(loginUserVm);
             }
         }
 
@@ -117,16 +124,16 @@ namespace WebUI.Controllers
                 RoomType room = db.RoomTypes.Find(id);
 
 
-                Cart c = null;
+                CartVM c = null;
 
                 if (Session["scart"] == null) //oturum acilmamissa scart isimli bir session olustur.
                 {
-                    c = new Cart();
+                    c = new CartVM();
 
                 }
                 else //scart isimli bir session varsa, var olan oturumu kullan
                 {
-                    c = Session["scart"] as Cart; //scart isimli session'i cart olarak unboxing yap ve icerisine at.                   
+                    c = Session["scart"] as CartVM; //scart isimli session'i cart olarak unboxing yap ve icerisine at.                   
                 }
 
                 //veya ternary if ile asagidaki sekilde de yazilabilir:
@@ -139,7 +146,7 @@ namespace WebUI.Controllers
                 ci.RoomType = room.OdaTipi;
                 ci.HolidayPackagePrice = holiday.Fiyat;
                 ci.HolidayPackage = holiday.PaketAdi;
-                c.AddItem(ci); //oturum icerisindeki karta kart item'larini ekle.
+                c.AddPackage(ci); //oturum icerisindeki karta kart item'larini ekle.
                 Session["scart"] = c;
 
                 return RedirectToAction("MyCart");
@@ -168,7 +175,7 @@ namespace WebUI.Controllers
 
         public ActionResult CompleteCart()
         {
-            Cart cart = Session["scart"] as Cart;
+            CartVM cart = Session["scart"] as CartVM;
             foreach (var item in cart.myCart)
             {
                 RoomType room = db.RoomTypes.Find(item.ID);
