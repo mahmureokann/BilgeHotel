@@ -54,13 +54,67 @@ BÝLGE HOTEL
 
 - WEbUI projesi icerisine bootstrap ve jquery yuklemesi yapildi.
 
-- Models klasörü içerisine AppUserVM Cart ve CartVM classlarý açýldý. Müþterilerin login iþlemini gerçekleþtirebilmesi için AppUserVM içerisine mail ve þifre iþlemleri için bilgiler yazýldý. CartItemVM classý içerisine toplam fiyat iþlemi gerçekleþtirildi. Carta rezervasyon bilgileri eklenirken kullanýlasý için Cart classý oluþturuldu.
+- Models klasörü içerisine AppUserVM, Cart ve CartVM classlarý açýldý. Müþterilerin login iþlemini gerçekleþtirebilmesi için AppUserVM içerisine mail ve þifre iþlemleri için bilgiler yazýldý. CartItemVM classý içerisine toplam fiyat iþlemi gerçekleþtirildi. Carta rezervasyon bilgileri eklenirken kullanýlasý için Cart classý oluþturuldu.
 
-- HomeController içerisinde müþteri giriþi için Cart,Register, Login Controllerlarý oluþturuldu.
+- HomeController içerisinde müþteri giriþi için Cart,Register ve Login Controllerlarý oluþturuldu.
+
+- 
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Content/bootstrap")
+</head>
+<body>
 
+
+    <nav class="navbar navbar-expand-lg bg-light navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                Bilge Hotel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Hakkýmýzda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rezervasyon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bize ulaþýn</a>
+                    </li>
+                   
+                </ul>
+                <form class="d-flex" role="search">
+                  
+                    <button type="button" class="btn btn-outline-warning me-2">Kayýt Ol!</button>
+                    <button type="button" class="btn btn-outline-success">Giriþ Yap!</button>
+
+                    @RenderBody()
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    @Scripts.Render("~/content/jquery")
+    @Scripts.Render("~/content/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
 
 
 

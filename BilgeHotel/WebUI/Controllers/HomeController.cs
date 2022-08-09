@@ -35,7 +35,7 @@ namespace WebUI.Controllers
             return View();
         }
 
-        //Register
+        //Register işlemleri
 
         public ActionResult Register()
         {
@@ -48,17 +48,20 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
+                CustomerService customerService = new CustomerService();
                 Customer customer = new Customer();
 
                 customer.Email = appUserVM.Email;
                 customer.Password = appUserVM.Password;
-                var result = cs.Create(customer);
+                //var result = cs.Create(customer);
+                
+                var result = customerService.Create(customer);
 
                 TempData["info"] = result;
 
 
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
 
             }
             else
@@ -67,7 +70,7 @@ namespace WebUI.Controllers
             }
         }
 
-        //Login 
+        ////Login işlemleri
         public ActionResult Login()
         {
             return View();
@@ -104,7 +107,7 @@ namespace WebUI.Controllers
             }
         }
 
-        //Kart ekleme
+        //Kart ekleme işlemleri
         public ActionResult AddToCart(int id)
         {
             try
@@ -148,6 +151,8 @@ namespace WebUI.Controllers
             }
 
         }
+
+        //kart işlemleri
         public ActionResult MyCart()
         {
             if (Session["scart"] != null)

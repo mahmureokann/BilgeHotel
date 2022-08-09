@@ -6,10 +6,8 @@ using System.Web;
 
 namespace WebUI.Models
 {
-    public class AppUserVM
+    public class LoginUserVm
     {
-       
-
         [Required(ErrorMessage = "Email giriniz!")]
         public string Email { get; set; }
 
@@ -19,6 +17,5 @@ namespace WebUI.Models
         [Required(ErrorMessage = "Sifre tekrar giriniz!")]
         [Compare("Password", ErrorMessage = "Sifreler ayni degil!")]
         public string ConfirmPassword { get; set; }
-
     }
 }
