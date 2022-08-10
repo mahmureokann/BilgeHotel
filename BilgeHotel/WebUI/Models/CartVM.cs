@@ -24,11 +24,6 @@ namespace WebUI.Models
 
         public void AddPackage(CartItemVM cartItem)
         {
-            //if (_myCart.ContainsKey(cartItem.TatilPaketID))
-            //{
-            //    _myCart[cartItem.TatilPaketID].GunSayisi += cartItem.GunSayisi;
-            //    return;
-            //}
             _myCart.Add(cartItem.HolidayPackageId, cartItem); //Eger eklenen urunun ID'sini icermiyorsa, urunu ekle
         }
     }

@@ -1,12 +1,14 @@
-﻿
+﻿@model WebUI.Models.CartVM
+    
+    
 @{
     ViewBag.Title = "MyCart";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
-
-
-    CartVM sessionCart = Session["scart"] as CartVM; //Unboxing
+    WebUI.Models.CartVM sepet = Session["scart"] as WebUI.Models.CartVM;
     decimal? totalPrice = 0;
+
+    //CartVM sessionCart = Session["scart"] as CartVM; //Unboxing
+
 
 
 }
@@ -18,21 +20,22 @@
                 <tr>
                     <th>Tatil Paketi</th>
                     <th>Oda Tipi</th>
-                    <th>Rezervasyon Giriş Tarihi</th>
-                    <th>Rezervasyon Çıkış Tarihi</th>
+                    <th>Rezervasyon Başlangıç Tarihi</th>
+                    <th>Rezervasyon Bitiş Tarihi</th>
                     <th>Toplam Fiyat</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in sessionCart.myCart)
+                @foreach (var item in sepet.myCart)
                 {
-                    totalPrice += item.ToplamFiyat;
+                    totalPrice += item.SubTotal;
                     <tr>
-                        <td>@item.TatilPaketi</td>
-                        <td>@item.OdaTuru</td>
-                        <td>@item.TatilBaslangic</td>
-                        <td>@item.TatilBitis</td>
-                        <td>@item.ToplamFiyat</td>
+                        <td>@item.HolidayPackage</td>
+                        <td>@item.RoomType</td>
+                        
+                        
+                        @* Ekleme yapmak gerekebilir! *@
+                        <td>@item.SubTotal</td>
                     </tr>
                 }
             </tbody>
