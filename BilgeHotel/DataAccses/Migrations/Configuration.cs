@@ -69,8 +69,10 @@
              {
                  new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Üç kişilik", OdaDurumu=DataAccses.Enums.OdaDurumu.Aktif,Fiyat=5000},
                  new RoomType { OdaTipi="Her şey dahil", OdaTuru="Dört kişilik",OdaDurumu=DataAccses.Enums.OdaDurumu.Tadilat,Fiyat=15000 },
-                 new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Tek kişilik",OdaDurumu=DataAccses.Enums.OdaDurumu.Temizlik,Fiyat=2000 },
+                 new RoomType { OdaTipi="Tam pansiyon", OdaTuru="Tek kişilik",OdaDurumu=DataAccses.Enums.OdaDurumu.Temizlik,Fiyat=10000 },
                  new RoomType { OdaTipi="Her şey dahil", OdaTuru="Kral dairesi",OdaDurumu=DataAccses.Enums.OdaDurumu.Aktif,Fiyat=20000 },
+                new RoomType { OdaTipi="Her şey dahil", OdaTuru="İki kişilik",OdaDurumu=DataAccses.Enums.OdaDurumu.Aktif,Fiyat=12000 }
+                
              };
 
             if (!context.RoomTypes.Any())//herhangi bir oda tipi yoksa

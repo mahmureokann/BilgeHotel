@@ -10,7 +10,7 @@ namespace DataAccses.Entity
     {
         public int HolidayPackageId { get; set; }
         public string PaketAdi { get; set; }
-        //public int RoomTypeId { get; set; }
+       
         public decimal Fiyat { get; set; }
 
         //Bir tatil paketinin kaç adet oda tipi olur? Bir tane olur

@@ -127,14 +127,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CustomFilter\AuthFilter.cs" />
+    <Compile Include="CustomFilter\ExceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AppUserVM.cs" />
+    <Compile Include="Models\CartHolidayVM.cs" />
     <Compile Include="Models\CartItemVM.cs" />
     <Compile Include="Models\CartVM.cs" />
     <Compile Include="Models\LoginUserVm.cs" />
+    <Compile Include="Models\RezervasyonVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +163,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\iletisim,jpg.jpg" />
+    <Content Include="images\kralll.jpg" />
+    <Content Include="images\oda2.jpg" />
+    <Content Include="images\oda3.jpg" />
+    <Content Include="images\otel.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -213,11 +222,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
-    <Content Include="Views\Home\MyCart.cshtml" />
     <Content Include="Views\Home\CompleteCart.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Rezervasyon.cshtml" />
+    <Content Include="Views\Home\HolidayPackage.cshtml" />
+    <Content Include="Views\Home\MyCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

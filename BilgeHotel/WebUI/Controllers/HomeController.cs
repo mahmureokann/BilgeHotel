@@ -20,6 +20,7 @@ namespace WebUI.Controllers
         {
             return View();
         }
+        
 
         public ActionResult About()
         {
@@ -48,7 +49,7 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 Customer customer = new Customer();
 
                 customer.Email = appUserVM.Email;
@@ -56,13 +57,13 @@ namespace WebUI.Controllers
                 customer.Firstname = appUserVM.Firstname;
                 customer.Lastname = appUserVM.Lastname;
                 customer.PhoneNumber = appUserVM.Tel;
-                
+
                 customer.Tckn = appUserVM.Tckn;
-                
+
 
                 var result = cs.Create(customer);
 
-                
+
 
                 TempData["info"] = result;
 
@@ -95,13 +96,17 @@ namespace WebUI.Controllers
                         Customer user = db.Customers.Where(x => x.Email == loginUserVm.Email && x.Password == loginUserVm.Password).FirstOrDefault();
 
                         Session["scart"] = user;
-                        return RedirectToAction("MyCart");
+                        return RedirectToAction("Index");
                     }
+
                     else
                     {
-                        TempData["error"] = "E-mail veya şifre hatalı!";
+                        TempData["error"] = "E-mail veya şifre hatalı! Eğer kayıtlı değilseniz lütfen Kayıt Ol butonuna basınız!";
                         return View(loginUserVm);
+
+
                     }
+
                 }
                 catch (Exception)
                 {
@@ -149,7 +154,7 @@ namespace WebUI.Controllers
                 c.AddPackage(ci); //oturum icerisindeki karta kart item'larini ekle.
                 Session["scart"] = c;
 
-                return RedirectToAction("MyCart");
+                return RedirectToAction("Index");
             }
             catch (Exception)
             {
@@ -157,6 +162,45 @@ namespace WebUI.Controllers
                 return View();
             }
 
+        }
+
+        //Paket ekleme
+        public ActionResult AddPackageToCart(int id)
+        {
+            try
+            {
+                HolidayPackage tatilPaketi = db.HolidayPackages.Find(id);
+                ReservationInfo rezervasyon = new ReservationInfo();
+                RoomType oda = db.RoomTypes.Find(id);
+
+
+                CartVM c = null;
+
+                if (Session["scart"] == null) //oturum acilmamissa scart isimli bir session olustur.
+                {
+                    c = new CartVM();
+
+                }
+                else //scart isimli bir session varsa, var olan oturumu kullan
+                {
+                    c = Session["scart"] as CartVM; //scart isimli session'i cartVM olarak unboxing yap ve icerisine at.
+                }
+
+
+                CartItemVM ci = new CartItemVM();
+
+                ci.HolidayPackage = tatilPaketi.PaketAdi;
+                ci.HolidayPackageId = tatilPaketi.HolidayPackageId;
+                ci.HolidayPackagePrice = tatilPaketi.Fiyat;
+                c.AddRoom(ci);
+                Session["scart"] = c;
+
+                return RedirectToAction("HolidayPackages");
+            }
+            catch (Exception)
+            {
+                return View();
+            }
         }
 
         //kart işlemleri
@@ -168,7 +212,7 @@ namespace WebUI.Controllers
             }
             else
             {
-                TempData["error"] = "Herhangi bir oda seçimi yapınız!";
+                TempData["error"] = "Lütfen tüm alanları doldurunuz!";
                 return RedirectToAction("Index");
             }
         }
@@ -182,11 +226,37 @@ namespace WebUI.Controllers
                 room.OdaSayisi -= item.OdaSayisi;
                 db.Entry(room).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                
+
                 Session.Remove("scart"); //scard isimli session'i bosalt.
             }
             return View();
         }
+        //Odalar
+        public ActionResult Rooms()
+        {
+            TempData["odalar"] = db.RoomTypes.OrderBy(x => x.RoomTypeId).ToList();
+
+            TempData.Keep();
+
+            return View();
+        }
+        //Tatil paketleri
+        public ActionResult HolidayPackage()
+        {
+            TempData["tatilPaketleri"] = db.HolidayPackages.OrderBy(x => x.HolidayPackageId).ToList();
+
+            TempData.Keep();
+
+            return View();
+        }
+        public ActionResult Rezervasyon()
+        {
+            return View();
+        }
+        
+       
+        
 
     }
+    
 }

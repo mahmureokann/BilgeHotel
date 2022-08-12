@@ -1,86 +1,8 @@
-﻿
+﻿@model WebUI.Models.CartItemVM
 @{
-    ViewBag.Title = "MyCart";
+    ViewBag.Title = "HolidayPackage";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
-    
-    CartVM sessionCart = Session["scart"] as CartVM; //Unboxing
-    decimal? totalPrice = 0;
-
 }
-<div>
-    <table class="table table-responsive">
-        <thead>
-            <tr>
-                <th>Tatil Paketi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in sessionCart.myCart)
-            {
-                totalPrice += item.ToplamFiyat;
-                <tr>
-                    <td>@item.TatilPaketi</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
-<div>
-    <table class="table table-responsive">
-        <thead>
-            <tr>
-                <th>Oda Tipi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in sessionCart.myCart)
-            {
-                totalPrice += item.SubTotal;
-                <tr>
-                    <td>@item.OdaTuru</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
-<div>
-    <table class="table table-responsive">
-        <thead>
-            <tr>
-                <th>Rezervasyon Başlangıç ve Rezervasyon Bitiş Tarihleri</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in sessionCart.myCart)
-            {
-                totalPrice += item.SubTotal;
-                <tr>
-                    <td>@item.RezBaslangic</td>
-                    <td>@item.RezBitia</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
-
-<div class="col-md-3">
-    <div class="card">
-        <div class="card-header">
-        </div>
-        <div class="card-body">
-            <div class="d-flex justify-content-between">
-                @*verileri yan yana yazdirmamizi saglar*@
-                <h5>Genel Toplam: </h5>
-                <h5> @totalPrice TL</h5>
-            </div>
-            <div class="col-md-12 mt-5">
-                @Html.ActionLink("Rezervasyonu Tamamla", "CompleteCart", "Home", null, new { @class = "btn btn-primary" })
-                @Html.ActionLink("Devam Et", "Index", "Home", null, new { @class = "btn" })
-            </div>
-        </div>
-    </div>
-</div>
 
 @*<div class=" container">
         <h2>Tatil Paketi Seçiniz</h2>
@@ -175,4 +97,44 @@
         <br />
         <button class="buton" type="submit">Alışverişi Tamamla</button>
     </div>*@
+<main>
+    <section>
+        <div class="text-secondary px-4 py-5 text-center">
+            <div class="py-5">
+                <div class="col-lg-6 mx-auto">
+                    <h3 style="color:midnightblue">TATİL PAKETLERİ</h3>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+                        <div class="card-body">
+                            <table id="datatablesSimple" class="table table-bordered">
+
+                                <tbody>
+                                    @foreach (var tatil in TempData["tatilPaketleri"] as List<DataAccses.Entity.HolidayPackage>
+                                        )
+                                    {
+                                        <tr>
+                                            <td>@tatil.PaketAdi</td>
+                                            <td>
+                                                <div class="text-center">
+                                                    @Html.ActionLink("Seç", "AddPackageToCart", "Rezervasyon", new { id = tatil.HolidayPackageId }, new { @class = "btn btn-outline-dark mt-auto" })
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <div>
+
+                            @*@Html.ActionLink("Alışverişi Tamamla", "", "Home", null, new { @class = "btn btn-outline-dark" })
+                        <meta http-equiv="refresh" content="3;Basket">*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 

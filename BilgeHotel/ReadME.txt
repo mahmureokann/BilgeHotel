@@ -58,7 +58,70 @@ BÝLGE HOTEL
 
 - HomeController içerisinde müþteri giriþi için Cart,Register ve Login Controllerlarý oluþturuldu.
 
-- Contact sayfasý oluþturuldu.
+- Contact sayfasý oluþturuldu.About sayfasý oluþturuldu. 
+
+- Auth Filter(Oturumun açýlmamasý durumunda login sayfasýna geri aktarýr.) ve Exception Filter(Bu filtre sayesinde kullanýcýlarýmýza, olasý hata durumlarýnda hata sayfalarýyla açýklama yapabilir ve istediðimiz þekilde yönlendirme iþlemini gerçekleþtirebiliyoruz.Hata almamýz durumunda bizim ex filterýmýz bizi index sayfasýna geri yönlendirecek.), projeye Custom Filter klasoru altýnda oluþturuldu.
+
+- Index sayfasý oluþturuldu.Rezervasyon ve Tatil paketleri viewleri bitmek üzere fakat MyCart viewinde CartVM classýna ulaþamýyorum. PROJEDEKÝ SIKINTILAR DEVAM ETMEKTE! 
+
+<!--@{
+    ViewBag.Title = "MyCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    WebUI.Models.CartVM sepet = Session["scart"] as WebUI.Models.CartVM;
+    decimal? totalPrice = 0;
+
+    //CartVM sessionCart = Session["scart"] as CartVM; //Unboxing
+
+
+
+}
+
+<div class="row">
+    <div class="col-md-9">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Tatil Paketi</th>
+                    <th>Oda Tipi</th>
+                    <th>Rezervasyon Baþlangýç Tarihi</th>
+                    <th>Rezervasyon Bitiþ Tarihi</th>
+                    <th>Toplam Fiyat</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in sepet.myCart)
+                {
+                    totalPrice += item.SubTotal;
+                    <tr>
+                        <td>@item.HolidayPackage</td>
+                        <td>@item.RoomType</td>-->
+@* Ekleme yapmak gerekebilir! *@
+<!--<td>@item.SubTotal</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="col-md-3">
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-between">-->
+@*verileri yan yana yazdirmamizi saglar*@
+<!--<h5>Genel Toplam: </h5>
+                    <h5> @totalPrice TL</h5>
+                </div>
+                <div class="col-md-12 mt-5">
+                    @Html.ActionLink("Rezervasyonu Tamamla", "CompleteCart", "Home", null, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Devam Et", "Index", "Home", null, new { @class = "btn" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />-->
+
 
 
 

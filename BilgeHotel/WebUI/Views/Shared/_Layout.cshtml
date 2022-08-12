@@ -1,17 +1,27 @@
 ﻿<DOCTYPE html>
     <html lang="en">
     <head>
+        
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - My ASP.NET Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        
+
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/Content/bootstrap")
-        
+        <style>
+            .myCard-img {
+                width: 100px;
+                height: auto;
+            }
+        </style>
+
     </head>
-    <body >
-        <nav class="navbar navbar-expand-lg bg-light navbar navbar-dark bg-dark">
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light navbar navbar-dark bg-dark" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/Home/Index">
                     Bilge Hotel
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,13 +30,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Hakkımızda</a>
+                            <a class="nav-link active" aria-current="page" href="/Home/About">Hakkımızda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Galeri</a>
+                            <a class="nav-link" href="/Home/Gallery">Galeri</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Rezervasyon</a>
+                            <a class="nav-link" href="/Home/Rezervasyon">Rezervasyon</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Home/HolidayPackage ">Tatil Paketleri</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Home/Contact">Bize ulaşın</a>
@@ -36,33 +49,29 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/Login">Giriş Yap</a></li>
                         <li class="nav-item"><a class="nav-link" href="/Home/Register">Kayıt Ol</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Home/MyCart">Alışveriş Sepeti</li>
 
-                        <li class="nav-item"><a class="nav-link" href="/Home/MyCart">Alışveriş Sepeti</a></li>
 
                     </ul>
-
-                
-
+                    
                 </div>
             </div>
         </nav>
 
+        <section class="py-5" >
+            <div class="container px-4 px-lg-5 mt-5">
+                @RenderBody()
+            </div>
+        </section>
 
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+        </footer>
+        Bootstrap core JS
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        Core theme JS
 
-<section class="py-5" style="background-color:white">
-    <div class="container px-4 px-lg-5 mt-5">
-        @RenderBody()
-    </div>
-</section>
-
-<footer class="py-5 bg-dark">
-    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-</footer>
- Bootstrap core JS
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
- Core theme JS
-
-<script src="~/Scripts/jquery-3.6.0.js"></script>
+        <script src="~/Scripts/jquery-3.6.0.js"></script>
     </body>
 </html>
 

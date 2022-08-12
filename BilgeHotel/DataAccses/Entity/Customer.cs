@@ -15,7 +15,9 @@ namespace DataAccses.Entity
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-       
+        //public DateTime RezBaslangic { get; set; }
+        //public DateTime RezBitis { get; set; }
+
 
         //Bir müşterinin kaç rezervasyon bilgisi olur? Bir fazla olur
         public List<ReservationInfo> reservationInfos { get; set; }

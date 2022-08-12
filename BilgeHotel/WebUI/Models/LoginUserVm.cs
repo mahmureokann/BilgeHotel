@@ -17,8 +17,8 @@ namespace WebUI.Models
         [Required(ErrorMessage = "Sifre giriniz!")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Sifre tekrar giriniz!")]
-        [Compare("Password", ErrorMessage = "Sifreler ayni degil!")]
-        public string ConfirmPassword { get; set; }
+        //[Required(ErrorMessage = "Sifre tekrar giriniz!")]
+        //[Compare("Password", ErrorMessage = "Sifreler ayni degil!")]
+        //public string ConfirmPassword { get; set; }
     }
 }
