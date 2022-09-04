@@ -3,8 +3,9 @@
     ViewBag.Title = "MyCart";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-    
+
     CartVM sessionCart = Session["scart"] as CartVM; //Unboxing
+    
     decimal? totalPrice = 0;
 
 }
@@ -82,97 +83,6 @@
     </div>
 </div>
 
-@*<div class=" container">
-        <h2>Tatil Paketi Seçiniz</h2>
-        <br />
 
 
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Standart Paket">
-
-        </div>
-        <br />
-
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Ultra Paket">
-
-        </div>
-        <br />
-
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Kampanyalı Paket">
-
-        </div>
-        <br />
-        <h2> Oda Seçimi Yapınız</h2>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Tam Pansiyon">
-
-        </div>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Her şey dahil">
-
-        </div>
-        <br />
-        <h2>Oda Türü Seçiniz</h2>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Tek kişilik">
-
-        </div>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="iki kişilik">
-
-        </div>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Üç kişilik">
-
-        </div>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Dört kişilik">
-
-        </div>
-        <br />
-        <div class="input-group">
-            <div class="input-group-text">
-                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" name="seçim" value="Kral Dairesi">
-
-        </div>
-        <br />
-        <button class="buton" type="submit">Alışverişi Tamamla</button>
-    </div>*@
-
+        

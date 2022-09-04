@@ -5,9 +5,9 @@ using System.Web;
 
 namespace WebUI.Models
 {
-    public class CartItemVM
+    public class CartItemVM : IDisposable
     {
-        public CartItemVM()
+        public CartItemVM() // proje açıldığı anda oda sayısı otomatik bir gelir.
         {
             OdaSayisi = 1;
 
@@ -22,7 +22,7 @@ namespace WebUI.Models
         public string HolidayPackage { get; set; }
         public int HolidayPackageId { get; set; }
         public decimal? HolidayPackagePrice { get; set; }
-        public int? OdaSayisi { get; set; }
+        public int? OdaSayisi { get; set; } 
         public DateTime RezBaslangic { get; set; }
         public DateTime RezBitis { get; set; }
         public int GunSayisi { get; set; }
@@ -36,6 +36,12 @@ namespace WebUI.Models
             {
                 return OdaSayisi*(HolidayPackagePrice + RoomTypePrice);
             }
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+            //https://docs.microsoft.com/tr-tr/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart bu linke bak
         }
     }
 }

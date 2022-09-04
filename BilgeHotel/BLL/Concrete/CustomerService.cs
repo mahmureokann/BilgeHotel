@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL.Concrete
-{
+{ 
     public class CustomerService:BaseRepository<Customer>
     {
     }
