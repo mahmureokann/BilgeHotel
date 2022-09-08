@@ -34,12 +34,15 @@ namespace Employee_UI
             foreach (Vardiya vardiya in vardiyalar)
             {
                 ListViewItem lvi = new ListViewItem();
+
                 lvi.Text = vardiya.VardiyaId.ToString();
-            
+
                 
                 lvi.SubItems.Add(vardiya.VardiyaBaslangic.ToString());
                 lvi.SubItems.Add(vardiya.VardiyaBitis.ToString());
                 lvi.SubItems.Add(vardiya.EmployeeId.ToString());
+                lvi.SubItems.Add(vardiya.Firstname.ToString());
+                lvi.SubItems.Add(vardiya.Lastname.ToString());
 
 
                 listView1.Items.Add(lvi);
@@ -66,6 +69,10 @@ namespace Employee_UI
                 vardiya1.VardiyaBitis = dtBitis.Value;
 
                 vardiya1.EmployeeId = Convert.ToInt32(txtCalisanId.Text);
+
+                vardiya1.Firstname = txtAd.Text.ToString();
+                vardiya1.Lastname = txtSoyad.Text.ToString();
+
 
                 string result = vardiyaRepo.Create(vardiya1);
                 MessageBox.Show(result);
@@ -96,6 +103,8 @@ namespace Employee_UI
                 guncelle.VardiyaBaslangic = dtBaslangic.Value;
                 guncelle.VardiyaBitis = dtBitis.Value;
                 guncelle.EmployeeId = Convert.ToInt32(txtCalisanId.Text);
+                guncelle.Firstname = txtAd.Text;
+                guncelle.Lastname = txtSoyad.Text;
                
 
 
@@ -131,6 +140,11 @@ namespace Employee_UI
             }
 
             VardiyaList();
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

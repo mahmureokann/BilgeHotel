@@ -253,10 +253,18 @@ namespace WebUI.Controllers
         {
             return View();
         }
-        
-       
+
+        public ActionResult Odalar()
+        {
+            TempData["odalar"] = db.RoomTypes.OrderBy(x => x.RoomTypeId).ToList();
+
+            TempData.Keep();
+            return View();
+        }
         
 
+
+
     }
-    
+
 }

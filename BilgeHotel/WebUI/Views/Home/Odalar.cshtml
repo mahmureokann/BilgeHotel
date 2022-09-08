@@ -1,0 +1,103 @@
+﻿@model WebUI.Models.CartItemVM
+@{
+    ViewBag.Title = "Odalar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <section>
+        <div class="text-secondary px-1 py-2 text-center">
+            <div class="py-5">
+                <div class="col-lg-6 mx-auto">
+                    <h1 style="color:darkred"><br />Bilge Hotel Ayrıcalıklı Odalarımız ile Tanışın!</h1>
+                    <div class="card-body">
+                        <table id="datatablesSimple" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Oda Sayısı</th>
+                                    <th>Oda Kapasitesi</th>
+                                    <th>Oda Bilgisi</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        1. katımızda 20 oda bulunmaktadır.
+
+                                    </td>
+                                    <td>1. katta tek kişilik (üç yataklı) ve üç kişilik odalarımız mevcuttur.</td>
+                                    <td>Minibar,klima,tv,saç kurutma makinesı,kablosuz internet.</td>
+                                </tr>
+
+                                </tr>
+                                <tr>
+                                    <td>2. katımızda 20 oda bulunmaktadır</td>
+                                    <td>2. katta tek kişilik (iki yataklı) ve iki kişilik odalarımız mevcuttur.</td>
+                                    <td>Minibar,klima,tv,saç kurutma makinesı,kablosuz internet.</td>
+                                </tr>
+                                <tr>
+                                    <td>3. katımızda 20 oda bulunmaktadır</td>
+                                    <td>3. katta katta iki kişilik (duble) ve 3 kişilik odalarımız mevcuttur.</td>
+                                    <td>Balkon,minibar,klima,tv,saç kurutma makinesı,kablosuz internet.</td>
+                                </tr>
+                                <tr>
+                                    <td>4. katımızda 19 oda bulunmaktadır</td>
+                                    <td>4. katta 10 adet iki kişilik (duble), 6 adet 4 kişilik (1 duble, 2 tek kilişilik yatak) ve 1 adet kral dairesi odalarımız mevcuttur.</td>
+                                    <td>Balkon,minibar,klima,tv,saç kurutma makinesı,kablosuz internet.</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+
+
+                    </div>
+                </div>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+
+
+                    <div class="card-body">
+                        <table id="datatablesSimple" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Odalar</th>
+                                    <th>Kişi Kapasitesi</th>
+                                    <th>Fiyat</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                @foreach (var item in TempData["odalar"] as List<DataAccses.Entity.RoomType>)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.OdaTipi
+
+                                        </td>
+                                        <td>@item.OdaTuru </td>
+                                        <td>
+                                            @item.Fiyat
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+

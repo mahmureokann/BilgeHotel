@@ -33,6 +33,8 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -41,12 +43,14 @@
             this.columnHeader1,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader2,
+            this.columnHeader3});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 30);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(705, 331);
+            this.listView1.Size = new System.Drawing.Size(964, 331);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -71,6 +75,16 @@
             this.columnHeader6.Text = "Çalışan ID";
             this.columnHeader6.Width = 206;
             // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Calisan Ad";
+            this.columnHeader2.Width = 105;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Calisan Soyad";
+            this.columnHeader3.Width = 169;
+            // 
             // VardiyaCalisanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -91,5 +105,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

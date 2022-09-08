@@ -29,7 +29,47 @@
                     </div>
 
 
+                   
 
+                </div>
+                <div class="col-lg-6 mx-auto">
+                    <h3 style="color:midnightblue">Lütfen istediğiniz oda tipini seçiniz</h3>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+                        <div class="card-body">
+                            <table id="datatablesSimple" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Odalar</th>
+                                        <th>Kişi Kapasitesi</th>
+                                        <th>Fiyat</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in TempData["odalar"] as List<DataAccses.Entity.RoomType>)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @item.OdaTipi
+
+                                            </td>
+                                            <td>@item.OdaTuru </td>
+                                            <td>
+                                                @item.Fiyat
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                 
 
                 </div>
             </div>

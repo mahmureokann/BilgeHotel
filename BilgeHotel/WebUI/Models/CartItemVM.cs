@@ -35,7 +35,25 @@ namespace WebUI.Models
             get
             {
                 return OdaSayisi*(HolidayPackagePrice + RoomTypePrice);
+
+                //%18 indirim için 30 gün önce ve her şey dahilse
+
+                if (RezBaslangic.Day-30>RezBitis.Day&&HolidayPackage=="Her şey dahil")
+                {
+                    return (RoomTypePrice + HolidayPackagePrice) * GunSayisi * 0.82m;
+                }
+                  // %15 indirim
+                else if(RezBaslangic.Day - 30 > RezBitis.Day && HolidayPackage == "Tam pansiyon")
+                {
+                    return (RoomTypePrice + HolidayPackagePrice) * GunSayisi * 0.85m;
+                }
             }
+
+            
+
+
+
+
         }
 
         public void Dispose()

@@ -12,9 +12,12 @@ namespace DataAccses.Map
         public VardiyaMap()
         {
             ToTable("dbo.Vardiyalar");
+
             Property(x => x.VardiyaId).IsRequired();
             Property(x => x.VardiyaBaslangic).IsRequired();
             Property(x => x.VardiyaBitis).IsRequired();
+            Property(x => x.Firstname).IsRequired();
+            Property(x => x.Lastname).IsRequired();
             
 
 

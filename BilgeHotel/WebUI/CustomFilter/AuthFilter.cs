@@ -8,6 +8,7 @@ namespace WebUI.CustomFilter
 {
     public class AuthFilter: FilterAttribute, IAuthorizationFilter
     {
+        //Oturum açılmaması durumunda login sayfasına geri yönlendirir.
         public void OnAuthorization(AuthorizationContext filterContext)
         {
             if (filterContext.HttpContext.Session["login"] == null)  

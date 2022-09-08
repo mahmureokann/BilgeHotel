@@ -29,6 +29,7 @@ namespace Employee_UI
             listView1.Items.Clear();
 
             List<Vardiya> vardiyalar = vardiyaRepo.GetList();
+           
 
             foreach (Vardiya vardiya in vardiyalar)
             {
@@ -37,6 +38,9 @@ namespace Employee_UI
                 lvi.SubItems.Add(vardiya.VardiyaBaslangic.ToString());
                 lvi.SubItems.Add(vardiya.VardiyaBitis.ToString());
                 lvi.SubItems.Add(vardiya.EmployeeId.ToString());
+                lvi.SubItems.Add(employee.Firstname.ToString());
+                lvi.SubItems.Add(employee.Lastname.ToString());
+                
 
 
                 listView1.Items.Add(lvi);

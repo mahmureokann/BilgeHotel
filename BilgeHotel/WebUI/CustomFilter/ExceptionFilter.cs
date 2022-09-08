@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace WebUI.CustomFilter
 {
-    public class ExceptionFilter: FilterAttribute, IExceptionFilter
+    public class ExceptionFilter : FilterAttribute, IExceptionFilter
     {
+        //Hata anında belirleğimiz sayfaya yönlendirilir. 
         public void OnException(ExceptionContext filterContext)
         {
             filterContext.ExceptionHandled = true;

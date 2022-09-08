@@ -44,9 +44,6 @@
             this.txtKullaniciAd = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
             this.btnListele = new System.Windows.Forms.Button();
             this.txtVardiya = new System.Windows.Forms.TextBox();
             this.txtPoz = new System.Windows.Forms.TextBox();
@@ -145,9 +142,6 @@
             this.CalisanBilgileri.Controls.Add(this.txtKullaniciAd);
             this.CalisanBilgileri.Controls.Add(this.numericUpDown1);
             this.CalisanBilgileri.Controls.Add(this.label3);
-            this.CalisanBilgileri.Controls.Add(this.btnGuncelle);
-            this.CalisanBilgileri.Controls.Add(this.btnSil);
-            this.CalisanBilgileri.Controls.Add(this.btnEkle);
             this.CalisanBilgileri.Controls.Add(this.btnListele);
             this.CalisanBilgileri.Controls.Add(this.txtVardiya);
             this.CalisanBilgileri.Controls.Add(this.txtPoz);
@@ -197,39 +191,9 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Çalışan ID:";
             // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Location = new System.Drawing.Point(202, 450);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(110, 31);
-            this.btnGuncelle.TabIndex = 2;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(318, 450);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(91, 31);
-            this.btnSil.TabIndex = 2;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.Location = new System.Drawing.Point(105, 450);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(91, 31);
-            this.btnEkle.TabIndex = 2;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(8, 450);
+            this.btnListele.Location = new System.Drawing.Point(213, 449);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(91, 31);
             this.btnListele.TabIndex = 2;
@@ -384,6 +348,7 @@
             this.Controls.Add(this.CalisanBilgileri);
             this.Name = "CalisanForm";
             this.Text = "CalisanForm";
+            this.Load += new System.EventHandler(this.CalisanForm_Load);
             this.CalisanBilgileri.ResumeLayout(false);
             this.CalisanBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -409,9 +374,6 @@
         private System.Windows.Forms.TextBox txtKullaniciAd;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.TextBox txtVardiya;
         private System.Windows.Forms.TextBox txtPoz;

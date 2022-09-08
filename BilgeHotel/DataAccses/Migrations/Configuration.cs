@@ -24,15 +24,15 @@
 
             List<Employee> employees = new List<Employee>()
             {
-                new Employee{Firstname="Selahattin",Lastname="Alkomut",Email="selahattin.alkomut@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.Yonetici,Ucret=30000,Pozisyon="Title bakınız",KullaniciAdi="yonetici"},
-                new Employee{Firstname="Levent",Lastname="Sişarpsoy",Email="levent.sisarp@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.Yonetici,Ucret=30000,Pozisyon="Title bakınız",KullaniciAdi="yonetici"},
+                new Employee{Firstname="Selahattin",Lastname="Alkomut",Email="selahattin.alkomut@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.Yonetici,Ucret=30000,Pozisyon="Title bakınız",KullaniciAdi="yonetici",VardiyaId=1},
+                new Employee{Firstname="Levent",Lastname="Sişarpsoy",Email="levent.sisarp@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.Yonetici,Ucret=30000,Pozisyon="Title bakınız",KullaniciAdi="yonetici",VardiyaId=2},
                 new Employee{Firstname="Gülay",Lastname="Aydınlık",Email="gulay.aydinlik@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.resepsiyon_sefi,Ucret=20000,Pozisyon="Title bakınız",KullaniciAdi="yonetici"},
                 new Employee{Firstname="Selahattin",Lastname="Karadibag",Email="selahattin.karadibak@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.IT_sorumlusu,SaatlikUcret=300,VardiyaSuresi=80,Pozisyon="Title bakınız",KullaniciAdi="calisan"},
                 new Employee{Firstname="Bahattin",Lastname="Karanlık",Email="bahattin.karanlik@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.resepsiyon_gorevlisi,SaatlikUcret=30,VardiyaSuresi=192, Pozisyon = "Title bakınız",KullaniciAdi="calisan"},
                 new Employee{Firstname="Ayşe",Lastname="Akıncı",Email="ayse.akinci@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.ascı,SaatlikUcret=50,VardiyaSuresi=192, Pozisyon = "Title bakınız",KullaniciAdi="calisan"},
                 new Employee{Firstname="Feyzullah",Lastname="Alşarp",Email="feyzullah.alsarp@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.elektrikci,SaatlikUcret=50,VardiyaSuresi=10, Pozisyon = "Title bakınız",KullaniciAdi="calisan"},
                 new Employee{Firstname="Kader",Lastname="Kısmet",Email="kader.kismet@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.garson,SaatlikUcret=50,VardiyaSuresi=192, Pozisyon = "Title bakınız",KullaniciAdi="calisan"},
-                new Employee{Firstname="Bilge",Lastname="Akserver",Email="bilge.akserver@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.bilgi_islem,SaatlikUcret=100,VardiyaSuresi=160, Pozisyon = "Title bakınız",KullaniciAdi="calisan" },
+                new Employee{Firstname="Bilge",Lastname="Akserver",Email="bilge.akserver@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.bilgi_islem,SaatlikUcret=100,VardiyaSuresi=160, Pozisyon = "Title bakınız",KullaniciAdi="calisan",VardiyaId=3 },
                 new Employee{Firstname="Mesut",Lastname="Bahtiyar",Email="mesut.bahtiyar@bilgehotel.com",Password="123",Title=DataAccses.Enums.Title.temizlik_gorevlisi,SaatlikUcret=50,VardiyaSuresi=192, Pozisyon = "Title bakınız",KullaniciAdi="calisan"},
 
             };
@@ -136,9 +136,9 @@
              {
 
                 
-                 new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
-                 new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
-                 new Vardiya { VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
+                 new Vardiya { Firstname="Selahattin" , Lastname="Alkomut",VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
+                 new Vardiya { Firstname="Levent",Lastname="Sişarpsoy" ,VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
+                 new Vardiya {Firstname="Bilge",Lastname="Akserver", VardiyaBaslangic=DateTime.Now,VardiyaBitis=DateTime.Now},
 
              };
 

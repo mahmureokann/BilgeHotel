@@ -12,6 +12,10 @@ namespace DataAccses.Entity
         public DateTime VardiyaBaslangic { get; set; }
         public DateTime VardiyaBitis { get; set; }
         public int EmployeeId { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        
+        
 
         //Bir vardiyanın kaç çalışanı olur? Çok
         public List<Employee> Employee { get; set; }

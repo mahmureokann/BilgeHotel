@@ -223,10 +223,10 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\CompleteCart.cshtml" />
-    <Content Include="Views\Home\Gallery.cshtml" />
     <Content Include="Views\Home\Rezervasyon.cshtml" />
     <Content Include="Views\Home\HolidayPackage.cshtml" />
     <Content Include="Views\Home\MyCart.cshtml" />
+    <Content Include="Views\Home\Odalar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
